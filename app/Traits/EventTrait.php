@@ -22,6 +22,6 @@ trait EventTrait
                 'email' => $validEmail,
             ]);
         }
-        dd($event->save());
+        $event->save();
     }
 }

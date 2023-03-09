@@ -60,9 +60,8 @@ class EventController extends Controller
         if ($validate->fails()) {
             return back()->withErrors($validate->errors())->withInput();
         }
-        $this->createEventOnGoogleCalendar($request->except('_token'));
-        // $validateEmails = $this->validateEmail($request->get('attendees'));
-        // $data = $request->all();
+        //enable this if you want to call google calendar API
+        // $this->createEventOnGoogleCalendar($request->except('_token'));
         Event::create($validate);
         return response()->json();
     }
