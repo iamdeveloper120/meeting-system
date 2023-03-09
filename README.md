@@ -8,8 +8,11 @@ This app is to communicate with google caledar API to create events from your sy
 - git clone https://github.com/iamdeveloper120/meeting-system.git
 - comopser install
 - php artisan migrate
+- php artisan db:seed (see UserFactory for password)
 - php artisan serve
 
+
+`php artisan db:seed` will create 10 dummy users and 10 events
 
 ### Features
 
